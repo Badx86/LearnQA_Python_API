@@ -1,15 +1,23 @@
 import pytest
 import requests
 from lib.base_case import BaseCase
+from lib.assertions import Assertions
 
 
 class TestUserAuth(BaseCase):
+    """
+    Класс тестов для проверки аутентификации пользователя
+    """
+    # Параметры для негативных сценариев тестирования
     exclude_params = [
-        "no_cookies",
+        "no_cookie",
         "no_token"
     ]
 
-    def setup(self):
+    def setup_method(self):
+        """
+        Метод настройки для аутентификации пользователя и установки необходимых токенов и кук
+        """
         data = {
             'email': 'vinkotov@example.com',
             'password': '1234'
@@ -22,21 +30,26 @@ class TestUserAuth(BaseCase):
         self.user_id_from_auth_method = self.get_json_value(response1, "user_id")
 
     def test_auth_user(self):
-
+        """
+        Тест для проверки аутентифицированного пользователя
+        """
         response2 = requests.get("https://playground.learnqa.ru/api/user/auth",
                                  headers={"x-csrf-token": self.token},
                                  cookies={"auth_sid": self.auth_sid}
                                  )
-        assert "user_id" in response2.json(), "There is no user id in the second response"
-        user_id_from_check_method = response2.json()["user_id"]
-        print(user_id_from_check_method)
 
-        assert self.user_id_from_auth_method == user_id_from_check_method, \
+        Assertions.assert_json_value_by_name(
+            response2,
+            "user_id",
+            self.user_id_from_auth_method,
             "User id from auth method is not equal to user id from check method"
+        )
 
     @pytest.mark.parametrize('condition', exclude_params)
     def test_negative_auth_check(self, condition):
-
+        """
+        Негативный тест для проверки аутентификации в разных условиях
+        """
         if condition == "no_cookie":
             response2 = requests.get(
                 "https://playground.learnqa.ru/api/user/auth",
@@ -48,7 +61,9 @@ class TestUserAuth(BaseCase):
                 cookies={"auth_sid": self.auth_sid}
             )
 
-        assert "user_id" in self.response2.json(), "There is no user id in the second response"
-
-        user_id_from_check_method = response2.json()["user_id"]
-        assert user_id_from_check_method == 0, f"User is authorized with condition {condition}"
+        Assertions.assert_json_value_by_name(
+            response2,
+            "user_id",
+            0,
+            f"User is authorized with condition {condition}"
+        )
