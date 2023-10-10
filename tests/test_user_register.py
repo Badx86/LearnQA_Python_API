@@ -1,4 +1,4 @@
-import requests
+from lib.my_requests import MyRequests
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 
@@ -8,7 +8,7 @@ class TestUserRegister(BaseCase):
     def test_create_user_successfully(self):
         data = self.preapare_registration_data()
         # Отправка POST запроса для регистрации пользователя
-        response = requests.post("https://playground.learnqa.ru/api/user/", data=data)
+        response = MyRequests.post("/user/", data=data)
         # Проверка кода ответа и наличия ключа "id" в ответе
         Assertions.assert_code_status(response, 200)
         Assertions.assert_json_has_key(response, "id")
@@ -20,7 +20,7 @@ class TestUserRegister(BaseCase):
         email = 'test@example.com'
         data = self.preapare_registration_data(email)
         # Отправка POST запроса для регистрации пользователя
-        response = requests.post("https://playground.learnqa.ru/api/user/", data=data)
+        response = MyRequests.post("/user/", data=data)
         # Проверка кода ответа и содержимого ответа
         Assertions.assert_code_status(response, 400)
         assert response.text == f"Users with email '{email}' already exists", \
