@@ -3,3 +3,5 @@
 venv/
 idea/
 config.ini
+logs/*
+__pycache__//
