@@ -46,7 +46,7 @@ class BaseCase:
 
         return response_as_dict[name]
 
-    def preapare_registratrion_data(self, email=None):
+    def preapare_registration_data(self, email=None):
         """
         Подготовить данные для регистрации пользователя
 

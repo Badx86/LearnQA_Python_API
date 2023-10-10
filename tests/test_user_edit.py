@@ -13,7 +13,7 @@ class TestUserEdit(BaseCase):
         Тест проверяет возможность редактирования пользователя после его регистрации
         """
         # Генерируем данные для регистрации пользователя
-        register_data = self.preapare_registratrion_data()
+        register_data = self.preapare_registration_data()
         # Отправляем запрос на регистрацию пользователя
         response1 = requests.post("https://playground.learnqa.ru/api/user/", data=register_data)
         # Проверяем корректность ответа после регистрации

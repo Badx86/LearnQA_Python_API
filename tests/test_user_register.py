@@ -6,7 +6,7 @@ from lib.assertions import Assertions
 class TestUserRegister(BaseCase):
 
     def test_create_user_successfully(self):
-        data = self.preapare_registratrion_data()
+        data = self.preapare_registration_data()
         # Отправка POST запроса для регистрации пользователя
         response = requests.post("https://playground.learnqa.ru/api/user/", data=data)
         # Проверка кода ответа и наличия ключа "id" в ответе
@@ -18,7 +18,7 @@ class TestUserRegister(BaseCase):
         Тестирование регистрации пользователя с существующим email
         """
         email = 'test@example.com'
-        data = self.preapare_registratrion_data(email)
+        data = self.preapare_registration_data(email)
         # Отправка POST запроса для регистрации пользователя
         response = requests.post("https://playground.learnqa.ru/api/user/", data=data)
         # Проверка кода ответа и содержимого ответа
