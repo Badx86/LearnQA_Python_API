@@ -15,6 +15,10 @@ class Logger:
         Запись логов в файл
         :param data: Строка, содержащая информацию для логирования
         """
+        # Убедимся, что директория logs существует перед записью в файл
+        logs_dir = os.path.dirname(cls.file_name)
+        if not os.path.exists(logs_dir):
+            os.makedirs(logs_dir)
         with open(cls.file_name, 'a', encoding='utf-8') as logger_file:
             logger_file.write(data)
 
