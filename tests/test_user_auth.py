@@ -146,7 +146,7 @@ class TestUserAuth(BaseCase):
                 self.failed_agents.append((user_agent, key, value, actual_values.get(key)))
 
     @allure.description("Final test to check if there were any identification errors for User Agents")
-    @pytest.mark.xfail
+    @pytest.mark.xfail(reason="Test passes individually but may fail in a suite run")
     def test_summary(self):
         """
         Итоговый тест, который проверяет, были ли ошибки в определении User Agent
