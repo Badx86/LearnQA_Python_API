@@ -47,3 +47,24 @@ class TestUserGet(BaseCase):
         # Проверка наличия определенных полей в ответе
         expected_fields = ["username", "email", "firstName", "lastName"]
         Assertions.assert_json_has_keys(response2, expected_fields)
+
+    @allure.description("This test verifies retrieval of another user's details after authenticating")
+    def test_get_another_user_data_after_auth(self):
+        # Данные для аутентификации одного из пользователей
+        data = {
+            'email': 'vinkotov@example.com',
+            'password': '1234'
+        }
+        # Отправляем запрос на аутентификацию и получаем ответ
+        response1 = MyRequests.post("/user/login", data=data)
+        # Извлекаем куки и токен из ответа для дальнейшего использования
+        auth_sid = self.get_cookie(response1, "auth_sid")
+        token = self.get_header(response1, "x-csrf-token")
+        # Отправляем запрос на получение данных другого пользователя, например, с ID 3
+        response2 = MyRequests.get("/user/1", headers={"x-csrf-token": token}, cookies={"auth_sid": auth_sid})
+        # Проверяем наличие или отсутствие определенных полей в ответе
+        Assertions.assert_json_has_key(response2, "username")
+        Assertions.assert_json_has_no_key(response2, "email")
+        Assertions.assert_json_has_no_key(response2, "firstName")
+        Assertions.assert_json_has_no_key(response2, "lastName")
+
