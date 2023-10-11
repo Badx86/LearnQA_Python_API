@@ -2,8 +2,10 @@ import pytest
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
+import allure
 
 
+@allure.epic("Authorization cases")
 class TestUserAuth(BaseCase):
     """
     Класс тестов для проверки аутентификации пользователя
@@ -14,6 +16,7 @@ class TestUserAuth(BaseCase):
         "no_token"
     ]
 
+    @allure.step("Setting up user authentication and necessary tokens and cookies")
     def setup_method(self):
         """
         Метод настройки для аутентификации пользователя и установки необходимых токенов и кук
@@ -29,6 +32,7 @@ class TestUserAuth(BaseCase):
         self.token = self.get_header(response1, "x-csrf-token")
         self.user_id_from_auth_method = self.get_json_value(response1, "user_id")
 
+    @allure.description("This test successfully authorize user by email and password")
     def test_auth_user(self):
         """
         Тест для проверки аутентифицированного пользователя
@@ -45,6 +49,7 @@ class TestUserAuth(BaseCase):
             "User id from auth method is not equal to user id from check method"
         )
 
+    @allure.description("This test check authorization status w/o sending auth cookie or token")
     @pytest.mark.parametrize('condition', exclude_params)
     def test_negative_auth_check(self, condition):
         """
@@ -74,7 +79,7 @@ class TestUserAuth(BaseCase):
     #     """
     #     phrase = input("Set a phrase: ")
     #     assert len(phrase) < 15, "The phrase is longer than 15 characters!"
-
+    @allure.description("This test checks for the presence of a specific cookie")
     def test_cookie(self):
         """
         Тест для проверки установки куки
@@ -87,6 +92,7 @@ class TestUserAuth(BaseCase):
         # print(response.headers)
         # print(response.cookies)
 
+    @allure.description("This test checks for the presence of a specific header")
     def test_homework_header(self):
         """
         Тест для проверки установки заголовка
@@ -100,7 +106,7 @@ class TestUserAuth(BaseCase):
     user_agents_data = [
         ("Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) "
          "AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
-            {'platform': 'Mobile', 'browser': 'No', 'device': 'Android'}),
+         {'platform': 'Mobile', 'browser': 'No', 'device': 'Android'}),
 
         (
             "Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) "
@@ -123,6 +129,7 @@ class TestUserAuth(BaseCase):
 
     failed_agents = []
 
+    @allure.description("Test for checking correct User Agent identification")
     @pytest.mark.parametrize('user_agent, expected_values', user_agents_data)
     def test_user_agent_check(self, user_agent, expected_values):
         """
@@ -138,6 +145,7 @@ class TestUserAuth(BaseCase):
             if actual_values.get(key) != value:
                 self.failed_agents.append((user_agent, key, value, actual_values.get(key)))
 
+    @allure.description("Final test to check if there were any identification errors for User Agents")
     @pytest.mark.xfail
     def test_summary(self):
         """

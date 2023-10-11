@@ -1,14 +1,17 @@
 from lib.my_requests import MyRequests
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
+import allure
 
 
+@allure.epic("User Edit Functionality")
 class TestUserEdit(BaseCase):
     """
     Класс для тестирования функционала редактирования пользователя
     """
 
     # REGISTER
+    @allure.description("This test verifies the ability to edit a user after their registration")
     def test_edit_just_created_user(self):
         """
         Тест проверяет возможность редактирования пользователя после его регистрации

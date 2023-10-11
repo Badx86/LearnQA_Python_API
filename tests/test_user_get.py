@@ -1,13 +1,16 @@
 from lib.my_requests import MyRequests
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
+import allure
 
 
+@allure.epic("User Get Functionality")
 class TestUserGet(BaseCase):
     """
     Класс для тестирования получения информации о пользователе
     """
 
+    @allure.description("This test verifies the retrieval of user details without authentication")
     def test_get_user_details_not_auth(self):
         """
         Тестирование получения информации о пользователе без аутентификации
@@ -20,6 +23,7 @@ class TestUserGet(BaseCase):
         Assertions.assert_json_has_no_key(response, "firstName")
         Assertions.assert_json_has_no_key(response, "lastName")
 
+    @allure.description("This test verifies the retrieval of user details after authenticating as that user")
     def test_get_user_details_auth_as_same_user(self):
         """
         Тестирование получения информации о пользователе после аутентификации того же пользователя.
