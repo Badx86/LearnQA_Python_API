@@ -17,7 +17,7 @@ class TestUserAuth(BaseCase):
     ]
 
     @allure.step("Setting up user authentication and necessary tokens and cookies")
-    def setup_method(self):
+    def setup_method(self, method):
         """
         Метод настройки для аутентификации пользователя и установки необходимых токенов и кук
         """
