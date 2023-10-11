@@ -7,6 +7,7 @@ class BaseCase:
     """
     Базовый класс с вспомогательными методами для тестов
     """
+
     def get_cookie(self, response: Response, cookie_name):
         """
         Получить значение куки из ответа по имени куки
@@ -46,7 +47,7 @@ class BaseCase:
 
         return response_as_dict[name]
 
-    def preapare_registration_data(self, email=None):
+    def preapare_registration_data(self, email=None, **kwargs):
         """
         Подготовить данные для регистрации пользователя
 
@@ -58,10 +59,13 @@ class BaseCase:
             domain = "example.com"
             random_part = datetime.now().strftime("%m%d%Y%H%M%S")
             email = f"{base_part}{random_part}@{domain}"
-        return {
+        data = {
             'password': '123',
             'username': 'learnqa',
             'firstName': 'Test',
             'lastName': 'Example',
             'email': email
         }
+        # Обновляем значения в словаре данными из kwargs
+        data.update(kwargs)
+        return data
