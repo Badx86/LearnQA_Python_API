@@ -7,8 +7,11 @@
 <a href="https://badx86.github.io/LearnQA_Python_API/">
     <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
 </a>
+<a href="https://www.python.org/doc/versions/">
+    <img alt="Python Version" src="https://img.shields.io/badge/python-3.11-blue">
+</a>  
 <a href="https://pypi.org/project/selenium">
-    <img alt="dependency - selenium" src=https://img.shields.io/badge/dependency-selenium-blue?logo=selenium&logoColor=white">
+    <img alt="dependency - selenium" src="https://img.shields.io/badge/dependency-selenium-blue?logo=selenium&logoColor=white">
 </a>  
 <a href="https://pypi.org/project/pytest">
     <img alt="dependency - pytest" src="https://img.shields.io/badge/dependency-pytest-blue?logo=pytest&logoColor=white">
