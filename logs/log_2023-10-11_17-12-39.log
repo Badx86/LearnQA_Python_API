@@ -1,0 +1,160 @@
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_successfully (call)
+Time: 2023-10-11 17:12:39.348182
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10112023171239@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"82043"}
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:38 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 13:12:38 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_with_existing_email (call)
+Time: 2023-10-11 17:12:40.578631
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: Users with email 'test@example.com' already exists
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:40 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '50', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_with_invalid_email (call)
+Time: 2023-10-11 17:12:41.746707
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'testemail.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: Invalid email format
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:41 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '20', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_without_field[username] (call)
+Time: 2023-10-11 17:12:42.890343
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10112023171242@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The following required params are missed: username
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:42 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '50', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_without_field[password] (call)
+Time: 2023-10-11 17:12:43.992215
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10112023171243@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The following required params are missed: password
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:43 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '50', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_without_field[email] (call)
+Time: 2023-10-11 17:12:45.116680
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The following required params are missed: email
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:44 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '47', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_without_field[firstName] (call)
+Time: 2023-10-11 17:12:46.193714
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'lastName': 'Example', 'email': 'test10112023171246@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The following required params are missed: firstName
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:45 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '51', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_without_field[lastName] (call)
+Time: 2023-10-11 17:12:47.297731
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'email': 'test10112023171247@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The following required params are missed: lastName
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:46 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '50', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_with_short_name (call)
+Time: 2023-10-11 17:12:48.350197
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'A', 'lastName': 'Example', 'email': 'test10112023171248@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The value of 'firstName' field is too short
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:47 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '43', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: tests/test_user_register.py::TestUserRegister::test_create_user_with_long_name (call)
+Time: 2023-10-11 17:12:49.516247
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'lastName': 'Example', 'email': 'test10112023171249@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: The value of 'firstName' field is too long
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:12:49 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '42', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
