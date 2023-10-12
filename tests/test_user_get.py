@@ -4,7 +4,7 @@ from lib.assertions import Assertions
 import allure
 
 
-@allure.epic("User Get Functionality")
+@allure.epic("User Retrieval Tests")
 class TestUserGet(BaseCase):
     """
     Класс для тестирования получения информации о пользователе

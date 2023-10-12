@@ -5,7 +5,7 @@ from lib.assertions import Assertions
 import allure
 
 
-@allure.epic("User Registration Functionality")
+@allure.epic("User Registration Tests")
 class TestUserRegister(BaseCase):
 
     @allure.description("This test verifies that a user can be created successfully")

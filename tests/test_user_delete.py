@@ -4,7 +4,7 @@ from lib.base_case import BaseCase
 from lib.my_requests import MyRequests
 
 
-@allure.epic("User Delete Functionality")
+@allure.epic("User Deletion Tests")
 class TestUserDelete(BaseCase):
 
     # Первый тест - попытка удалить пользователя с ID 2

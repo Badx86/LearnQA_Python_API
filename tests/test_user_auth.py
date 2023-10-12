@@ -5,7 +5,7 @@ from lib.my_requests import MyRequests
 import allure
 
 
-@allure.epic("Authorization cases")
+@allure.epic("User Authentication Tests")
 class TestUserAuth(BaseCase):
     """
     Класс тестов для проверки аутентификации пользователя

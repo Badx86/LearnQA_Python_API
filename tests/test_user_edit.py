@@ -6,7 +6,7 @@ from lib.assertions import Assertions
 import allure
 
 
-@allure.epic("User Edit Functionality")
+@allure.epic("User Modification Tests")
 class TestUserEdit(BaseCase):
     """
     Класс для тестирования функционала редактирования пользователя
