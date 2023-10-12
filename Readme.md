@@ -1,12 +1,12 @@
 <a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml">
     <img alt="LearnQA" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml/badge.svg">
-</a>
+</a>  
 <a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
     <img alt="LearnQA-sheduled" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
-</a>
+</a>  
 <a href="https://badx86.github.io/LearnQA_Python_API/">
     <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
-</a>
+</a>  
 <a href="https://www.python.org/doc/versions/">
     <img alt="Python Version" src="https://img.shields.io/badge/python-3.11-blue">
 </a>  
