@@ -1,0 +1,16 @@
+
+-----
+Test: test_user_get.py::TestUserGet::test_check_user_with_id_3_exists (call)
+Time: 2023-10-11 17:45:52.545278
+Request method: GET
+Request URL: https://playground.learnqa.ru/api_dev/user/3
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: User not found
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:45:52 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----

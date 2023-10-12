@@ -1,0 +1,32 @@
+
+-----
+Test: test_user_get.py::TestUserGet::test_get_another_user_data_after_auth (call)
+Time: 2023-10-11 17:48:58.409863
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'vinkotov@example.com', 'password': '1234'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":2}
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:48:57 GMT', 'Content-Type': 'application/json', 'Content-Length': '13', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=c887e5f0d56c77951f0665fe9278a6c902e94918f1549272bcf2cafc2634fd9d', 'x-csrf-token': '3c3ccd0fecaf723100efaa3f29ddaea29688719702e94918f1549272bcf2cafc2634fd9d', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 13:48:57 GMT'}
+Response cookies: {'auth_sid': 'c887e5f0d56c77951f0665fe9278a6c902e94918f1549272bcf2cafc2634fd9d'}
+
+-----
+
+-----
+Test: test_user_get.py::TestUserGet::test_get_another_user_data_after_auth (call)
+Time: 2023-10-11 17:48:59.165727
+Request method: GET
+Request URL: https://playground.learnqa.ru/api_dev/user/3
+Request data: None
+Request headers: {'x-csrf-token': '3c3ccd0fecaf723100efaa3f29ddaea29688719702e94918f1549272bcf2cafc2634fd9d'}
+Request cookies: {'auth_sid': 'c887e5f0d56c77951f0665fe9278a6c902e94918f1549272bcf2cafc2634fd9d'}
+
+Response code: 404
+Response text: User not found
+Response headers: {'Date': 'Wed, 11 Oct 2023 13:48:58 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----

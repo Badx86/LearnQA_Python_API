@@ -1,0 +1,48 @@
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_authorized_as_another_user (call)
+Time: 2023-10-12 00:54:53.181815
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10122023005453@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"82080"}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:54:54 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:54:53 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_authorized_as_another_user (call)
+Time: 2023-10-12 00:54:54.149917
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10122023005454@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"82081"}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:55:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:55:09 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_authorized_as_another_user (call)
+Time: 2023-10-12 00:55:10.258721
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'test10122023005454@example.com', 'password': '123'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":82081}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:55:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=95518f99da7b4c56fb6b271ccda969bf35bf09d9565d5d4cb5f6d68b52e1a323', 'x-csrf-token': 'acd5245ef203a749c35d73e62490e25dfe42e0c835bf09d9565d5d4cb5f6d68b52e1a323', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:55:10 GMT'}
+Response cookies: {'auth_sid': '95518f99da7b4c56fb6b271ccda969bf35bf09d9565d5d4cb5f6d68b52e1a323'}
+
+-----

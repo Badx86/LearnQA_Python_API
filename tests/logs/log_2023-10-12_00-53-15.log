@@ -1,0 +1,128 @@
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_2 (call)
+Time: 2023-10-12 00:53:15.340639
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'vinkotov@example.com', 'password': '1234'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":2}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:16 GMT', 'Content-Type': 'application/json', 'Content-Length': '13', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=436397be9a71420f36130111d6bf782902e94918f1549272bcf2cafc2634fd9d', 'x-csrf-token': '8625e9ba850e577eb7ee39982692353066f689e302e94918f1549272bcf2cafc2634fd9d', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:53:16 GMT'}
+Response cookies: {'auth_sid': '436397be9a71420f36130111d6bf782902e94918f1549272bcf2cafc2634fd9d'}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_2 (call)
+Time: 2023-10-12 00:53:16.279332
+Request method: DELETE
+Request URL: https://playground.learnqa.ru/api_dev/user/2
+Request data: None
+Request headers: {'x-csrf-token': '8625e9ba850e577eb7ee39982692353066f689e302e94918f1549272bcf2cafc2634fd9d'}
+Request cookies: {'auth_sid': '436397be9a71420f36130111d6bf782902e94918f1549272bcf2cafc2634fd9d'}
+
+Response code: 400
+Response text: Please, do not delete test users with ID 1, 2, 3, 4 or 5.
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:17 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '57', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_positive_delete_created_user (call)
+Time: 2023-10-12 00:53:17.375363
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10122023005317@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"82076"}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:53:17 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_positive_delete_created_user (call)
+Time: 2023-10-12 00:53:18.323658
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'test10122023005317@example.com', 'password': '123'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":82076}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '17', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=551943f8cef3a5df8b643d964706c35c46d69428d79a69acfc6f9dc750269fe8', 'x-csrf-token': 'dbf56a3a230810b32a4f0175ac510d7f589d2bff46d69428d79a69acfc6f9dc750269fe8', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:53:18 GMT'}
+Response cookies: {'auth_sid': '551943f8cef3a5df8b643d964706c35c46d69428d79a69acfc6f9dc750269fe8'}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_positive_delete_created_user (call)
+Time: 2023-10-12 00:53:18.756060
+Request method: DELETE
+Request URL: https://playground.learnqa.ru/api_dev/user/82076
+Request data: None
+Request headers: {'x-csrf-token': 'dbf56a3a230810b32a4f0175ac510d7f589d2bff46d69428d79a69acfc6f9dc750269fe8'}
+Request cookies: {'auth_sid': '551943f8cef3a5df8b643d964706c35c46d69428d79a69acfc6f9dc750269fe8'}
+
+Response code: 200
+Response text: 
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:19 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:53:19 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_positive_delete_created_user (call)
+Time: 2023-10-12 00:53:19.799414
+Request method: GET
+Request URL: https://playground.learnqa.ru/api_dev/user/82076
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: User not found
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:20 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_authorized_as_another_user (call)
+Time: 2023-10-12 00:53:20.676618
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/
+Request data: {'password': '123', 'username': 'learnqa', 'firstName': 'Test', 'lastName': 'Example', 'email': 'test10122023005320@example.com'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":"82077"}
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:21 GMT', 'Content-Type': 'application/json', 'Content-Length': '14', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 20:53:20 GMT'}
+Response cookies: {}
+
+-----
+
+-----
+Test: test_user_delete.py::TestUserDelete::test_delete_user_authorized_as_another_user (call)
+Time: 2023-10-12 00:53:21.564432
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'test10122023005321@example.com', 'password': '123'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: Invalid username/password supplied
+Response headers: {'Date': 'Wed, 11 Oct 2023 20:53:22 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '34', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache'}
+Response cookies: {}
+
+-----

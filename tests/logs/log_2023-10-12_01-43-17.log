@@ -1,0 +1,34 @@
+
+-----
+Test: test_user_auth.py::TestUserAuth::test_homework_header (setup)
+Time: 2023-10-12 01:43:17.482763
+Request method: POST
+Request URL: https://playground.learnqa.ru/api_dev/user/login
+Request data: {'email': 'vinkotov@example.com', 'password': '1234'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"user_id":2}
+Response headers: {'Date': 'Wed, 11 Oct 2023 21:43:17 GMT', 'Content-Type': 'application/json', 'Content-Length': '13', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Server': 'Apache', 'Set-Cookie': 'auth_sid=10eef54c89fc0bf15aa3af9467e698db02e94918f1549272bcf2cafc2634fd9d', 'x-csrf-token': '79365d5b23feebdfd3db707b6a3aa9f6f8d48cf302e94918f1549272bcf2cafc2634fd9d', 'Cache-Control': 'max-age=0', 'Expires': 'Wed, 11 Oct 2023 21:43:17 GMT'}
+Response cookies: {'auth_sid': '10eef54c89fc0bf15aa3af9467e698db02e94918f1549272bcf2cafc2634fd9d'}
+
+-----
+
+-----
+Test: test_user_auth.py::TestUserAuth::test_homework_header (call)
+Time: 2023-10-12 01:43:17.876431
+Request method: GET
+Request URL: https://playground.learnqa.ru/api_dev/homework_header
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: int(2)
+This is 404 error!
+<a href='/'>Home</a>
+Response headers: {'Date': 'Wed, 11 Oct 2023 21:43:25 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=10', 'Vary': 'Accept-Encoding', 'Server': 'Apache', 'Content-Encoding': 'gzip'}
+Response cookies: {}
+
+-----
