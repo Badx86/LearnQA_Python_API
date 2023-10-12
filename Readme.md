@@ -1,27 +1,29 @@
-<table>
-<tr>
-    <td><a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml">
-        <img alt="LearnQA" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml/badge.svg">
-    </a></td>  
-    <td><a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
-        <img alt="LearnQA-sheduled" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
-    </a></td>  
-    <td><a href="https://badx86.github.io/LearnQA_Python_API/">
-        <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
-    </a></td>
-</tr>
-<tr>
-    <td><a href="https://www.python.org/doc/versions/">
-        <img alt="Python Version" src="https://img.shields.io/badge/python-3.11-blue">
-    </a></td>
-    <td><a href="https://pypi.org/project/selenium">
-        <img alt="dependency - selenium" src="https://img.shields.io/badge/dependency-selenium-blue?logo=selenium&logoColor=white">
-    </a></td>
-    <td><a href="https://pypi.org/project/pytest">
-        <img alt="dependency - pytest" src="https://img.shields.io/badge/dependency-pytest-blue?logo=pytest&logoColor=white">
-    </a></td>
-</tr>
-</table>
+<div align="center">
+    <table>
+    <tr>
+        <td align="center"><a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml">
+            <img alt="LearnQA" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml/badge.svg">
+        </a></td>  
+        <td align="center"><a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
+            <img alt="LearnQA-sheduled" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
+        </a></td>  
+        <td align="center"><a href="https://badx86.github.io/LearnQA_Python_API/">
+            <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
+        </a></td>
+    </tr>
+    <tr>
+        <td align="center"><a href="https://www.python.org/doc/versions/">
+            <img alt="Python Version" src="https://img.shields.io/badge/python-3.11-blue">
+        </a></td>
+        <td align="center"><a href="https://pypi.org/project/selenium">
+            <img alt="dependency - selenium" src="https://img.shields.io/badge/dependency-selenium-blue?logo=selenium&logoColor=white">
+        </a></td>
+        <td align="center"><a href="https://pypi.org/project/pytest">
+            <img alt="dependency - pytest" src="https://img.shields.io/badge/dependency-pytest-blue?logo=pytest&logoColor=white">
+        </a></td>
+    </tr>
+    </table>
+</div>
 
 
 
