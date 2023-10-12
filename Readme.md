@@ -14,13 +14,9 @@
 
 ### 1. Запуск тестов локально
 
-Для запуска тестов локально:
-
 $env:ENV = "prod"
 echo $env:ENV
 python -m pytest tests/
-
-Для запуска тестов локально:
 
 docker --version
 docker pull python 
