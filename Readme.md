@@ -14,8 +14,8 @@
 
 ### 1. Запуск тестов локально
 
-$env:ENV = "prod"
-echo $env:ENV
+$env:ENV = "prod"  
+echo $env:ENV  
 python -m pytest tests/
 
 docker --version
