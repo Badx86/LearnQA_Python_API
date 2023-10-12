@@ -25,5 +25,5 @@ docker run --rm --mount type=bind,src=C:\\Users\\LearnQA_Python_API,target=/test
 
 Генерация отчетов с помощью Allure:
 
-python -m pytest --alluredir=test_results/ tests/
+python -m pytest --alluredir=test_results/ tests/  
 allure serve test_results/
