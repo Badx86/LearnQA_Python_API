@@ -1,3 +1,13 @@
+<a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
+    <img alt="tests" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
+</a>
+<a href="https://badx86.github.io/LearnQA_Python_API/">
+    <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
+</a>
+<a href="https://pypi.org/project/pytest">
+    <img alt="dependency - pytest" src="https://img.shields.io/badge/dependency-pytest-blue?logo=pytest&logoColor=white">
+</a>  
+
 # Test Automation for REST API
 
 Данный проект представляет собой набор автоматических тестов для REST API. Тесты реализованы на Python с использованием библиотеки `pytest` и интегрированы с системой отчетности `Allure`.
