@@ -18,9 +18,9 @@ $env:ENV = "prod"
 echo $env:ENV  
 python -m pytest tests/
 
-docker --version
-docker pull python 
-docker build -t pytest_runner .
+docker --version  
+docker pull python  
+docker build -t pytest_runner .  
 docker run --rm --mount type=bind,src=C:\\Users\\LearnQA_Python_API,target=/tests_project/ pytest_runner pytest
 
 Генерация отчетов с помощью Allure:
