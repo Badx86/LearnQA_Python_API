@@ -1,8 +1,8 @@
-<a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/API-tests.yml">
-    <img alt="tests" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/API-tests.yml/badge.svg">
+<a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml">
+    <img alt="LearnQA" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA.yml/badge.svg">
 </a>
 <a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
-    <img alt="tests" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
+    <img alt="LearnQA-sheduled" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
 </a>
 <a href="https://badx86.github.io/LearnQA_Python_API/">
     <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
