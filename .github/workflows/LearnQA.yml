@@ -1,4 +1,4 @@
-name: API tests
+name: LearnQA
   
 on:
   push:
