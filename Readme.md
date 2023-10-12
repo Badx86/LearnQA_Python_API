@@ -1,9 +1,15 @@
+<a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/API-tests.yml">
+    <img alt="tests" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/API-tests.yml/badge.svg">
+</a>
 <a href="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml">
     <img alt="tests" src="https://github.com/Badx86/LearnQA_Python_API/actions/workflows/LearnQA-schedule.yml/badge.svg">
 </a>
 <a href="https://badx86.github.io/LearnQA_Python_API/">
     <img alt="Allure-report" src="https://img.shields.io/badge/Allure%20Report-deployed-green">
 </a>
+<a href="https://pypi.org/project/selenium">
+    <img alt="dependency - selenium" src=https://img.shields.io/badge/dependency-selenium-blue?logo=selenium&logoColor=white">
+</a>  
 <a href="https://pypi.org/project/pytest">
     <img alt="dependency - pytest" src="https://img.shields.io/badge/dependency-pytest-blue?logo=pytest&logoColor=white">
 </a>  
