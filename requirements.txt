@@ -1,5 +1,0 @@
-allure-pytest
-requests
-pytest
-pytest-sugar
-pytest-xdist
